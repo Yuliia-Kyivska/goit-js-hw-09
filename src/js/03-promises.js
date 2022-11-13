@@ -17,25 +17,23 @@ function callСreatePromise(e) {
 
   // i это position
   for (let i = 0; i < count; i++) {
-    createPromise(i + 1, parseInt(delay.value) + (step.value * i));
+    createPromise(i + 1, parseInt(delay.value) + step.value * i);
   }
-  
 }
 
 function createPromise(position, delay) {
-
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-    const shouldResolve = Math.random() > 0.3;
+      const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
         resolve({
           position: position,
-          delay: delay
+          delay: delay,
         });
       } else {
         reject({
           position: position,
-          delay: delay
+          delay: delay,
         });
       }
     }, delay);
@@ -43,21 +41,13 @@ function createPromise(position, delay) {
 
   promise
     .then(({ position, delay }) => {
-    Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
-    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  })
-  .catch(({ position, delay }) => {
-     Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
-     console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-  });
+      Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
+      console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+    })
+    .catch(({ position, delay }) => {
+      Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
+      console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+    });
 
   return promise;
 }
-
-
-
-
-
-
-
-
