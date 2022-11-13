@@ -15,7 +15,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose: (selectedDates) => {
-    //new Date() - текущая дата,делает ли эта библиотека преобразования? можно ли записать вместо let date - efaultDate?
+    //new Date() - текущая дата, делает ли эта библиотека преобразования? можно ли записать ниже в if вместо date - options.defaultDate?
     let date = new Date();
     if (date > selectedDates[0]) {
        Notiflix.Notify.failure('Please choose a date in the future');

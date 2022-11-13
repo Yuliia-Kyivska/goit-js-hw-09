@@ -1,0 +1,35 @@
+body {
+  min-height: 70vh;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  margin-right: 15px;
+}
+.timer {
+  display: flex;
+}
+.field {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  display: block;
+}
+.value {
+  display: flex;
+  width: 2em;
+  height: 2.4em;
+  align-items: center;
+  justify-content: center;
+  color: rgb(178, 255, 71);
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(6, 124, 87);
+  border-top: solid 2 px rgb(237, 252, 75);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  line-height: 1;
+  border-radius: 10px;
+}
